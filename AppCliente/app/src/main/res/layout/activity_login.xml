@@ -23,10 +23,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtusuario"
         android:layout_marginBottom="10dp"
-        android:layout_width="220dp"
+        android:layout_width="260dp"
         android:hint="Usuario"
-        app:helperText="Nombre y Apellido"
         app:endIconMode="clear_text"
+        app:startIconDrawable="@mipmap/user"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -40,9 +40,9 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtpassword"
-        android:layout_width="220dp"
+        android:layout_width="260dp"
         android:hint="Password"
-        app:helperText="Minimo 8 caracteres"
+        app:startIconDrawable="@mipmap/password"
         app:endIconMode="password_toggle"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -59,7 +59,7 @@
         android:id="@+id/btnlogin"
         android:text="Ingresar"
         android:layout_marginTop="160dp"
-        android:layout_width="220dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
