@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SignUp"></activity>
+        <activity android:name=".BottomNav" />
         <activity android:name=".Registro" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity">

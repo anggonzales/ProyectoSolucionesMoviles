@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/solicitudes"
+        android:icon="@mipmap/solictiud_foreground"
+        android:title="@string/title_solicitud" />
+    <item
+        android:id="@+id/info"
+        android:icon="@mipmap/en_marcha"
+        android:title="@string/title_concluida" />
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@mipmap/acerca"
+        android:title="@string/title_info" />
+</menu>

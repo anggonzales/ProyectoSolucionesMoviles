@@ -51,7 +51,7 @@
             android:elevation="5dp"
             android:layout_marginBottom="30dp"
             android:textSize="16dp"
-            android:text="Inciar con Facebook"
+            android:text="Iniciar con Facebook"
             android:textAllCaps="false"/>
 
     </LinearLayout>

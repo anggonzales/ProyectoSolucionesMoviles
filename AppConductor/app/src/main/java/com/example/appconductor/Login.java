@@ -33,6 +33,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(Login.this, "Bienvendio Usuario:", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Login.this, BottomNav.class));
                 //Aquí codigo
             }
         });

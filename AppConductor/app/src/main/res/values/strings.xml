@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AppConductor</string>
+    <string name="title_solicitud">Solicitudes</string>
+    <string name="title_concluida">En marcha</string>
+    <string name="title_info">Info</string>
+
 </resources>
