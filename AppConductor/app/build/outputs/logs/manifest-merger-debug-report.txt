@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-23:12
+ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\6119d746697059b7e1b74aab4d181f56\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\3ec6fa8458ddbe732478393a9f9e6c77\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\0362ff4d8672321347a402c32368f192\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -25,25 +25,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\akari\.gradle\ca
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\63647da4654da12a6f2785cfbbad8123\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\733fc1d306cee2c05d3e1fb0b7527020\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\fdd65d8b6066fd289a68b42931dc03a2\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
 		INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
-		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-23:12
+		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-24:12
 		INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
-		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-23:12
+		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:1-24:12
 		INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:5:5-21:19
+ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:5:5-22:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\3ec6fa8458ddbe732478393a9f9e6c77\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\3ec6fa8458ddbe732478393a9f9e6c77\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:5-89
@@ -64,28 +64,32 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\ak
 		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.appconductor.SignUp
+ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:12:9-53
+	android:name
+		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:12:19-41
 activity#com.example.appconductor.Registro
-ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:12:9-55
+ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:13:9-46
 	android:name
-		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:12:19-43
+		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:13:19-43
 activity#com.example.appconductor.Login
-ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:13:9-43
+ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:14:9-43
 	android:name
-		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:13:19-40
+		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:14:19-40
 activity#com.example.appconductor.MainActivity
-ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:14:9-20:20
+ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:15:9-21:20
 	android:name
-		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:14:19-47
+		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:15:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:19:27-74
 uses-sdk
 INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
