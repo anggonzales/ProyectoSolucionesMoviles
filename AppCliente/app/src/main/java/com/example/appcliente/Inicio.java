@@ -1,27 +1,37 @@
 package com.example.appcliente;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.navigation.NavigationView;
 
-public class Inicio extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener,GoogleMap.OnMapClickListener {
+public class Inicio extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnMapReadyCallback,
+        GoogleMap.OnInfoWindowClickListener,GoogleMap.OnMapClickListener {
     GoogleMap mapa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +69,14 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mapa = googleMap;
-        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-18.007633, -70.239271), 14));
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-18.006622, -70.246063), 14));
+            if (ContextCompat.checkSelfPermission(this,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION) ==
+                    PackageManager.PERMISSION_GRANTED) {
+                mapa.setMyLocationEnabled(true);
+                mapa.getUiSettings().setZoomControlsEnabled(false);
+                mapa.getUiSettings().setCompassEnabled(true);
+            }
     }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
