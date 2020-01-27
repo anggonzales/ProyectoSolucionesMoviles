@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="Intenciones"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:id="@+id/activity_intenciones"/>
+        <item android:title="Multimedia"
+            android:icon="@android:drawable/ic_media_play"
+            android:id="@+id/activity_multimedia"/>
+        <item android:title="Permisos"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:id="@+id/activity_permisos"/>
+        <item android:title="Mi Recycler View"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:id="@+id/activity_mirecyclerview" />
+        <item android:title="MiFragmentTabhost"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:id="@+id/activity_mifragmenttabhost"/>
+    </group>
+    <item android:title="Acciones adicionales">
+        <menu>
+            <item android:id="@+id/nav_compartir"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="Compartir" />
+            <item android:id="@+id/nav_salir"
+                android:icon="@android:drawable/ic_menu_manage"
+                android:title="Salir" />
+        </menu>
+    </item>
+</menu>
