@@ -5,11 +5,11 @@
         android:icon="@mipmap/solictiud_foreground"
         android:title="@string/title_solicitud" />
     <item
-        android:id="@+id/info"
+        android:id="@+id/enmarcha"
         android:icon="@mipmap/en_marcha"
         android:title="@string/title_concluida" />
     <item
-        android:id="@+id/navigation_cart"
+        android:id="@+id/info"
         android:icon="@mipmap/acerca"
         android:title="@string/title_info" />
 </menu>

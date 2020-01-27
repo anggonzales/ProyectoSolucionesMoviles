@@ -49,15 +49,13 @@ public class BottomNav extends AppCompatActivity {
                     transaction.replace(R.id.frame_container, FragmentoSeleccionado);
                     transaction.commit();
                     return true;
-                /*case R.id.navigation_gifts:
-                    FragmentoSeleccionado = new Formulario();
-                    //FragmentTransaction transaction = fragmentManager.beginTransaction();
+                case R.id.enmarcha:
+                    FragmentoSeleccionado = new EnMarcha();
                     transaction.replace(R.id.frame_container, FragmentoSeleccionado);
                     transaction.commit();
-                    toolbar.setTitle("Formulario");
                     return true;
 
-                case R.id.navigation_cart:
+                /*case R.id.navigation_cart:
                     FragmentoSeleccionado = new LoginFragmento();
                     //FragmentTransaction transaction = fragmentManager.beginTransaction();
                     transaction.replace(R.id.frame_container, FragmentoSeleccionado);
