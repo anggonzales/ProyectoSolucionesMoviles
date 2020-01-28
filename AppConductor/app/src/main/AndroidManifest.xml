@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EnMarcha"></activity>
+        <activity android:name=".DetalleSolicitud"></activity>
+        <activity android:name=".EnMarcha" />
         <activity android:name=".Solicitud" />
         <activity android:name=".SignUp" />
         <activity android:name=".BottomNav" />

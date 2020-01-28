@@ -30,7 +30,7 @@ public class BottomNav extends AppCompatActivity {
     void Llamarvista(){
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        FragmentoSeleccionado = new LlamandoSolicitud();
+        FragmentoSeleccionado = new LlamadoSolicitud();
         transaction.replace(R.id.frame_container, FragmentoSeleccionado);
         transaction.commit();
     }
@@ -45,15 +45,15 @@ public class BottomNav extends AppCompatActivity {
             FragmentTransaction transaction = fragmentManager.beginTransaction();
             switch (item.getItemId()) {
                 case R.id.solicitudes:
-                    FragmentoSeleccionado = new LlamandoSolicitud();
+                    FragmentoSeleccionado = new LlamadoSolicitud();
                     transaction.replace(R.id.frame_container, FragmentoSeleccionado);
                     transaction.commit();
                     return true;
                 case R.id.enmarcha:
-                    FragmentoSeleccionado = new EnMarcha();
+                    /*FragmentoSeleccionado = new EnMarcha();
                     transaction.replace(R.id.frame_container, FragmentoSeleccionado);
                     transaction.commit();
-                    return true;
+                    return true;*/
 
                 /*case R.id.navigation_cart:
                     FragmentoSeleccionado = new LoginFragmento();

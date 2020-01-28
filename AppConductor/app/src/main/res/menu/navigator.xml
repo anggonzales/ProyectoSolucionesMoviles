@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Solicitudes"
+            android:id="@+id/activity_solicitudes"
+            android:orderInCategory="2"
+            android:icon="@mipmap/solictiud"
+            />
+        <item android:title="En Marcha"
+            android:id="@+id/activity_enmarcha"
+            android:orderInCategory="2"
+            android:icon="@mipmap/en_marcha"
+            />
+        <item android:title="Info"
+            android:id="@+id/activity_info"
+            android:orderInCategory="2"
+            android:icon="@mipmap/acerca"
+            />
+    </group>
+</menu>
