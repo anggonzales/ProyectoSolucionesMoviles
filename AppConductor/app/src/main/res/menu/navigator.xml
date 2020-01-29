@@ -4,7 +4,7 @@
             android:title="Solicitudes"
             android:id="@+id/activity_solicitudes"
             android:orderInCategory="2"
-            android:icon="@mipmap/solictiud"
+            android:icon="@mipmap/solictiud_foreground"
             />
         <item android:title="En Marcha"
             android:id="@+id/activity_enmarcha"
