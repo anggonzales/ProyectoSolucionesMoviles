@@ -91,20 +91,6 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
             case R.id.activity_permisos:
                 startActivity(new Intent(this, Login.class));
                 break;
-            case R.id.activity_mirecyclerview:
-                startActivity(new Intent(this, Login.class));
-                break;
-            case R.id.activity_mifragmenttabhost:
-                startActivity(new Intent(this, Login.class));
-                break;
-            case R.id.nav_compartir:
-                Intent paramView;
-                paramView = new Intent("android.intent.action.SEND");
-                paramView.setType("text/plain");
-                paramView.putExtra("android.intent.extra.TEXT", "Descarga nuestra app de la PlayStore" +
-                        " \n" + "https://play.google.com/store/apps/details?id=app.product.demarktec.alo14_pasajero");
-                startActivity(Intent.createChooser(paramView, "Comparte Nuestro aplicativo"));
-                break;
             case R.id.nav_salir:
                 finish();
                 break;
