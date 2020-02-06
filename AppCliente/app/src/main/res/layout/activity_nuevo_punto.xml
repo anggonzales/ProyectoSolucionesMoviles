@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NuevoPunto">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".NuevoPunto">
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="20dp"
+    android:layout_gravity="center"
+    android:background="#F2F3F5"
+    android:hint="Ubicación"
+        android:drawableLeft="@mipmap/pin"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="#F2F3F5"
+        android:drawableLeft="@mipmap/pin2"
+        android:hint="Ubicación" />
+
+    <fragment
+        android:id="@+id/mapa1"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+    </fragment>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="Dibujar"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:drawableLeft="@mipmap/crayon"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="Crear ruta"
+        android:drawableLeft="@mipmap/polyline"/>
+    </LinearLayout>
+</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

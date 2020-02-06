@@ -2,13 +2,13 @@
     <group android:checkableBehavior="single">
         <item android:title="Mi Cuenta"
             android:icon="@drawable/user"
-            android:id="@+id/activity_intenciones"/>
+            android:id="@+id/activity_micuenta"/>
         <item android:title="Historial de Servicios"
             android:icon="@drawable/time_machine"
-            android:id="@+id/activity_multimedia"/>
+            android:id="@+id/activity_historial"/>
         <item android:title="Acerca de"
             android:icon="@drawable/about"
-            android:id="@+id/activity_permisos"/>
+            android:id="@+id/activity_acerca"/>
         <item android:id="@+id/nav_salir"
             android:icon="@mipmap/logout"
             android:title="Salir" />

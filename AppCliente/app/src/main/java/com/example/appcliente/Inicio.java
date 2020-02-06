@@ -16,6 +16,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -82,13 +83,13 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.activity_intenciones:
+            case R.id.activity_micuenta:
                 startActivity(new Intent(this, Login.class));
                 break;
-            case R.id.activity_multimedia:
+            case R.id.activity_historial:
                 startActivity(new Intent(this, Login.class));
                 break;
-            case R.id.activity_permisos:
+            case R.id.activity_acerca:
                 startActivity(new Intent(this, Login.class));
                 break;
             case R.id.nav_salir:
@@ -111,5 +112,13 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
         } else {
             super.onBackPressed();
         }
+    }
+
+    public void ver(View view) {
+        startActivity(new Intent(this,VerRutas.class));
+    }
+
+    public void nuevo(View view) {
+        startActivity(new Intent(this,NuevoPunto.class));
     }
 }

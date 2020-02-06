@@ -37,7 +37,8 @@
         android:layout_marginBottom="70dp"
         android:tag="ver"
         app:backgroundTint="#455A64"
-        app:rippleColor="#43e3ff"/>
+        app:rippleColor="#43e3ff"
+        android:onClick="nuevo"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,5 +48,6 @@
         android:layout_marginRight="15dp"
         android:layout_marginBottom="150dp"
         app:backgroundTint="#455A64"
-        app:rippleColor="#43e3ff"/>
+        app:rippleColor="#43e3ff"
+        android:onClick="ver"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
