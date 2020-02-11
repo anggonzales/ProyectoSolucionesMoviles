@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.appconductor.Solicitudes.Solicitud;
+
 public class Login extends AppCompatActivity {
 
     Button btn_ir_crearCuenta,iniciar_sesion;

@@ -2,21 +2,36 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.appconductor">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".DetalleSolicitud"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyApOTFfvxhFlfpbFDQDQfZxm2sN_SxG2sc" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity android:name=".Solicitudes.SolicitudMapa"></activity>
+        <activity android:name=".Solicitudes.DetalleSolicitud" />
         <activity android:name=".EnMarcha" />
-        <activity android:name=".Solicitud" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".SignUp" />
         <activity android:name=".BottomNav" />
         <activity android:name=".Registro" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Solicitudes.Solicitud"/>
+        <activity android:name=".Solicitudes.Solicitud_2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

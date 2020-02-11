@@ -1,31 +1,35 @@
-package com.example.appconductor;
-
-import android.os.Bundle;
-import android.widget.Toast;
+package com.example.appconductor.Solicitudes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Bundle;
+
+import com.example.appconductor.R;
+
+import java.util.ArrayList;
 import java.util.Vector;
 
-public class SolicitudRecyclerView extends AppCompatActivity {
+public class DetalleSolicitud extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private AdaptadorSolicitud adaptador;
+    private AdaptadorDetalleSolicitud adaptador;
     private Vector<String> misdatos;
+    public Vector<String> valor;
+    private String res;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mi_item);
+        setContentView(R.layout.detalle_solicitud_item);
         recyclerView = findViewById(R.id.recycler_view);
         misdatos = new Vector<String>();
-        misdatos.add("Destino Plaza Vigil Número de pasajeros : 4");
-        misdatos.add("Destino Plaza Vigil Número de pasajeros : 3");
-        misdatos.add("Destino Plaza Vigil Número de pasajeros : 4");
-        misdatos.add("Destino Plaza Vigil Número de pasajeros : 4");
-        adaptador = new AdaptadorSolicitud(this,
-                misdatos);
+        misdatos.add("Wilson Callisaya");
+        misdatos.add("Pepito Domingez");
+        misdatos.add("Pepito Domingez");
+        misdatos.add("Pedro Martinez");
+        adaptador = new AdaptadorDetalleSolicitud(this , misdatos);
         recyclerView.setAdapter(adaptador);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

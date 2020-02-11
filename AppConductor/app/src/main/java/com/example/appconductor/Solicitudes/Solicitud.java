@@ -1,26 +1,37 @@
-package com.example.appconductor;
+package com.example.appconductor.Solicitudes;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.appconductor.EnMarcha;
+import com.example.appconductor.R;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Vector;
+
 public class Solicitud extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
+    private AdaptadorSolicitud adaptador;
+    private Vector<String> misdatos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.drawerlayout);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setContentView(R.layout.mi_item);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_solicitud);
         setSupportActionBar(toolbar);
         // Navigation Drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(
@@ -32,6 +43,18 @@ public class Solicitud extends AppCompatActivity implements NavigationView.OnNav
         NavigationView navigationView = (NavigationView) findViewById(
                 R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //RecyclerView
+        recyclerView = findViewById(R.id.recycler_view_solicitud);
+        misdatos = new Vector<String>();
+        misdatos.add("Destino Plaza Vigil Número de pasajeros : 4");
+        misdatos.add("Destino Plaza Vigil Número de pasajeros : 3");
+        misdatos.add("Destino Plaza Vigil Número de pasajeros : 4");
+        misdatos.add("Destino Plaza Vigil Número de pasajeros : 4");
+        adaptador = new AdaptadorSolicitud(this, misdatos);
+        recyclerView.setAdapter(adaptador);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
     }
 
     public void VeUsuarios(View view) {
@@ -54,11 +77,10 @@ public class Solicitud extends AppCompatActivity implements NavigationView.OnNav
             default:
                 break;
         }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(
                 R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }

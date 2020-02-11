@@ -11,6 +11,11 @@
             android:orderInCategory="2"
             android:icon="@mipmap/en_marcha"
             />
+        <item android:title="Historial"
+            android:id="@+id/activity_historial"
+            android:orderInCategory="2"
+            android:icon="@mipmap/en_marcha"
+            />
         <item android:title="Info"
             android:id="@+id/activity_info"
             android:orderInCategory="2"
