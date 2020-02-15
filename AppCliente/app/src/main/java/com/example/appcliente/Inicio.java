@@ -10,30 +10,41 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.navigation.NavigationView;
 
-public class Inicio extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnMapReadyCallback,
-        GoogleMap.OnInfoWindowClickListener,GoogleMap.OnMapClickListener {
+import java.util.ArrayList;
+
+public class Inicio extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback,
+        GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMapClickListener {
     GoogleMap mapa;
+    ArrayList<Marker> markers = new ArrayList<>();
+    //LatLng ubicacion;
+    private double longitude = 0.0;
+    private double latitude = 0.0;
+    LatLng latLng = new LatLng(latitude, longitude);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,10 +56,10 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 // Navigation Drawer
-       DrawerLayout drawer = (DrawerLayout) findViewById(
+        DrawerLayout drawer = (DrawerLayout) findViewById(
                 R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
-                drawer, toolbar, R.string.drawer_open, R.string. drawer_close);
+                drawer, toolbar, R.string.drawer_open, R.string.drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(
@@ -64,21 +75,28 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
 
     @Override
     public void onMapClick(LatLng latLng) {
-
+               markers.add(mapa.addMarker(new MarkerOptions()
+                .position(latLng)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                .title("PUNTO DE DESTINO EN COMÚN")
+                .snippet("" + latLng.latitude + latLng.longitude)));
     }
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mapa = googleMap;
         mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-18.006622, -70.246063), 14));
-            if (ContextCompat.checkSelfPermission(this,
-                    android.Manifest.permission.ACCESS_FINE_LOCATION) ==
-                    PackageManager.PERMISSION_GRANTED) {
-                mapa.setMyLocationEnabled(true);
-                mapa.getUiSettings().setZoomControlsEnabled(false);
-                mapa.getUiSettings().setCompassEnabled(true);
-            }
+        if (ContextCompat.checkSelfPermission(this,
+                android.Manifest.permission.ACCESS_FINE_LOCATION) ==
+                PackageManager.PERMISSION_GRANTED) {
+            mapa.setMyLocationEnabled(true);
+            mapa.getUiSettings().setZoomControlsEnabled(false);
+            mapa.getUiSettings().setCompassEnabled(true);
+            mapa.setOnMapClickListener(this);
+        }
     }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -103,6 +121,7 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(
@@ -115,10 +134,10 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     }
 
     public void ver(View view) {
-        startActivity(new Intent(this,VerRutas.class));
+        startActivity(new Intent(this, VerRutas.class));
     }
 
     public void nuevo(View view) {
-        startActivity(new Intent(this,NuevoPunto.class));
+        startActivity(new Intent(this, NuevoPunto.class));
     }
 }
