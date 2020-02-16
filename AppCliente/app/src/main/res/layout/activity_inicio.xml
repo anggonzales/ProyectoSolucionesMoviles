@@ -45,17 +45,19 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnguardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/plus"
-        app:tint="#FFF"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="bottom|end"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="240dp"
+        android:gravity="center"
         android:tag="ver"
-        app:backgroundTint="#455A64"
-        app:rippleColor="#43e3ff"
-        android:text="GUARDAR" />
+        app:backgroundTint="#FFFF"
+        app:cornerRadius="100dp"
+        app:icon="@mipmap/en_marcha"
+        app:iconSize="40dp"
+        app:rippleColor="#43e3ff" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
