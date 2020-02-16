@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Solicitudes.SolicitudMapa"
+    tools:context=".MainActivity"
     android:orientation="vertical">
-
     <fragment
         android:id="@+id/mapa"
         android:layout_width="match_parent"
@@ -24,5 +23,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnfinalizar"
         android:text="Finalizar"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:onClick="mifinalizar"/>
 </LinearLayout>
