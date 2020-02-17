@@ -1,5 +1,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,18 +12,35 @@
         android:layout_height="0dp"
         android:layout_weight="90"
         class="com.google.android.gms.maps.SupportMapFragment"/>
-    <EditText
-        android:id="@+id/miedt"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10"
-        android:text="MI NOMBRE"
-        />
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnfinalizar"
-        android:text="Finalizar"
-        android:visibility="invisible"
-        android:onClick="mifinalizar"/>
+        android:layout_marginHorizontal="15dp"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtusuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Costo del Servicio"
+            app:endIconMode="clear_text"
+            app:layout_constraintBottom_toTopOf="@+id/mapa"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtcostoServicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/btnaceptar"
+            android:text="ACEPTAR"
+            android:visibility="visible" />
+    </LinearLayout>
 </LinearLayout>

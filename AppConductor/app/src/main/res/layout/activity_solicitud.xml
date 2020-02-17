@@ -31,13 +31,29 @@
                 android:text="Pasajeros : 3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <Button
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#0A245F"
-                android:onClick="VeUsuarios"
-                android:text="Ver"
-                android:textColor="@color/white" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#0A245F"
+                    android:text="Ver"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnUsuarios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#0A245F"
+                    android:text="Usuarios"
+                    android:textColor="@color/white" />
+            </LinearLayout>
         </LinearLayout>
 </ScrollView>

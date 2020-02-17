@@ -29,22 +29,27 @@
         <activity android:name=".SignUp" />
         <activity android:name=".BottomNav" />
         <activity android:name=".Login" />
-        <activity android:name=".Solicitudes.Solicitud"/>
-        <activity android:name=".Solicitudes.Solicitud_2"/>
-        <!--<activity android:name=".Solicitudes.Solicitud_2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>-->
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Solicitudes.Solicitud_2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--<activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+        <service
+            android:name=".Solicitudes.ServicioAceptacion">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
