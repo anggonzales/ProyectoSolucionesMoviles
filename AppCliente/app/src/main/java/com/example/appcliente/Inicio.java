@@ -1,9 +1,12 @@
 package com.example.appcliente;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +16,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -85,11 +89,24 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
+
         ButterKnife.bind(this);
         SupportMapFragment mapFragment = (SupportMapFragment)
                 getSupportFragmentManager().findFragmentById(R.id.mapa);
         mapFragment.getMapAsync(this);
 
+        if ((ContextCompat.checkSelfPermission(Inicio.this,
+                android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)){
+            //arranque();
+        } else {
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                //arranque();
+            } else {
+                solicitarPermiso(Manifest.permission.ACCESS_FINE_LOCATION,
+                        "Sin el permiso" + " de ubicacion no podremos localizarte", 1);
+            }
+        }
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 // Navigation Drawer
@@ -239,5 +256,32 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
             }
         };
         MySingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectRequest);
+    }
+    //permiso ubicacion
+    public void solicitarPermiso(final String permiso, String justificacion, final int codigo) {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this, permiso)) {
+            AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
+            dialogo1.setTitle("Solicitud de permiso");
+            dialogo1.setMessage(justificacion);
+            dialogo1.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialogo1, int id) {
+                    ActivityCompat.requestPermissions(Inicio.this, new String[]{permiso}, codigo);
+                }
+            });
+            dialogo1.show();
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{permiso}, codigo);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == 0) {
+            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //arranque();
+            } else {
+                solicitarPermiso(Manifest.permission.ACCESS_FINE_LOCATION,
+                        "Sin el permiso" + " de ubicacion no podremos localizarte", 0);
+            }
+        }
     }
 }

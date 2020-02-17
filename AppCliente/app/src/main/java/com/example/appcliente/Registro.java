@@ -29,9 +29,6 @@ public class Registro extends AppCompatActivity {
     EditText edtcorreo;
     @BindView(R.id.btnlogin)
     Button btnlogin;
-    //  private RecyclerView recyclerView;
-    // private RecyclerView.LayoutManager layoutManager;
-    //private AdapterUsuario adaptador;
     private ArrayList<Usuarios> midatos;
 
     private static final String PATH_USUARIO = "USUARIOS";
