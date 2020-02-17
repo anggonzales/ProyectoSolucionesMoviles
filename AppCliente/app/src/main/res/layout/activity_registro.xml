@@ -69,7 +69,7 @@
         android:layout_marginBottom="10dp"
         android:layout_width="320dp"
         android:hint="Password"
-        app:helperText="Mínimo 8 carácteres"
+        app:helperText="Mínimo 6 carácteres"
         app:endIconMode="password_toggle"
         app:startIconDrawable="@mipmap/password"
         android:layout_height="wrap_content"
