@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mAuth = FirebaseAuth.getInstance();
     }
 
     public void login(View view) {
@@ -27,8 +28,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-//        if (mAuth.getCurrentUser()!=null){
-
-      //  }
+       if (mAuth.getCurrentUser()!=null){
+           startActivity(new Intent(this, Inicio.class));
+           finish();
+        }
     }
 }
