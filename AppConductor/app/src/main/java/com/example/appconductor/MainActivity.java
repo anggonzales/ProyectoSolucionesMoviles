@@ -25,6 +25,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void login(View view) {
+        startActivity(new Intent(this, Login.class));
+    }
+
+    public void registro(View view) {
+        startActivity(new Intent(this, SignUp.class));
+    }
+
     public void mifinalizar(View view) {
     }
 }

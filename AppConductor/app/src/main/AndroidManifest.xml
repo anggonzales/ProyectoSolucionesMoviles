@@ -25,13 +25,20 @@
         <activity android:name=".Solicitudes.SolicitudMapa"></activity>
         <activity android:name=".Solicitudes.DetalleSolicitud" />
         <activity android:name=".EnMarcha" />
-        <activity android:name=".MainActivity" />
+<!--        <activity android:name=".MainActivity" />-->
         <activity android:name=".SignUp" />
         <activity android:name=".BottomNav" />
-        <activity android:name=".Registro" />
         <activity android:name=".Login" />
         <activity android:name=".Solicitudes.Solicitud"/>
-        <activity android:name=".Solicitudes.Solicitud_2">
+        <activity android:name=".Solicitudes.Solicitud_2"/>
+        <!--<activity android:name=".Solicitudes.Solicitud_2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
