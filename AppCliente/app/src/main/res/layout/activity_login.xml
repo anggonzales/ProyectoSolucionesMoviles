@@ -24,7 +24,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtusu"
         android:layout_marginBottom="10dp"
-        android:layout_width="260dp"
+        android:layout_width="390dp"
         android:hint="E-mail"
         app:endIconMode="clear_text"
         app:startIconDrawable="@mipmap/correo"
@@ -42,7 +42,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
-        android:layout_width="260dp"
+        android:layout_width="390dp"
         android:hint="Password"
         app:startIconDrawable="@mipmap/password"
         app:endIconMode="password_toggle"

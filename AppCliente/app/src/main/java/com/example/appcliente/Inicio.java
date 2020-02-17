@@ -107,14 +107,14 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
                         "Sin el permiso" + " de ubicacion no podremos localizarte", 1);
             }
         }
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 // Navigation Drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(
                 R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
-                drawer, toolbar, R.string.drawer_open, R.string.drawer_close);
-        drawer.addDrawerListener(toggle);
+                drawer, toolbar, R.string.drawer_open, R.string. drawer_close);
+       /* drawer.addDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(
                 R.id.nav_view);
