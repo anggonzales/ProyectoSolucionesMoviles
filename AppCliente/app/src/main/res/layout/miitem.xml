@@ -16,14 +16,9 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
-            android:layout_marginLeft="20dp"
-            android:text="Inicio:"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-        <TextView
-            android:id="@+id/titulo"
+
             android:layout_weight="1"
             android:gravity="center"
             android:layout_width="match_parent"
@@ -37,24 +32,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_marginLeft="20dp"
-                android:text="Fin:"
+                android:id="@+id/titulo"
+                android:layout_marginLeft="30dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/subtitulo"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
         </LinearLayout>
         <Button
-            android:id="@+id/mibotonitem"
+            android:id="@+id/btnver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="solicitar"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="30dp"
+            android:text="Ver"
+            android:backgroundTint="@color/colorAccent"
+            />
+        <Button
+            android:id="@+id/btnUsuarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="30dp"
+            android:text="Usuarios"
             android:backgroundTint="@color/colorAccent"
             />
     </LinearLayout>

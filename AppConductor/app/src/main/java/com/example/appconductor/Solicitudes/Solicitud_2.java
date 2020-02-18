@@ -107,4 +107,8 @@ public class Solicitud_2 extends AppCompatActivity {
             }
         });
     }
+
+    public void detalle(View view) {
+        startActivity(new Intent(this, DetalleSolicitud.class));
+    }
 }

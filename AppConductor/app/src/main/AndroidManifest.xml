@@ -3,10 +3,12 @@
     package="com.example.appconductor">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <uses-feature android:name="android.hardware.location.gps" />
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -16,20 +18,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".RutasUsuarios"></activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyApOTFfvxhFlfpbFDQDQfZxm2sN_SxG2sc" />
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
-        <activity android:name=".Solicitudes.SolicitudMapa"></activity>
+
+        <activity android:name=".Solicitudes.SolicitudMapa" />
         <activity android:name=".Solicitudes.DetalleSolicitud" />
-        <activity android:name=".EnMarcha" />
-<!--        <activity android:name=".MainActivity" />-->
+        <activity android:name=".EnMarcha" /> <!-- <activity android:name=".MainActivity" /> -->
         <activity android:name=".SignUp" />
         <activity android:name=".BottomNav" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".Solicitudes.Solicitud_2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,15 +42,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>-->
-        <service
-            android:name=".Solicitudes.ServicioAceptacion">
+        <service android:name=".Solicitudes.ServicioAceptacion">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

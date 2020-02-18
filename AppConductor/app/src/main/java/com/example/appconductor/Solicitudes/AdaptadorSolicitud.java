@@ -48,6 +48,7 @@ public class AdaptadorSolicitud extends RecyclerView.Adapter<AdaptadorSolicitud.
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(micontextsolicitud, SolicitudMapa.class);
+                intent.putExtra("cliente", datos.get(i).getNombre_cliente());
                 intent.putExtra("latitud", datos.get(i).getLatitud());
                 intent.putExtra("longitud" , datos.get(i).getLongitud());
                 micontextsolicitud.startActivity(intent);

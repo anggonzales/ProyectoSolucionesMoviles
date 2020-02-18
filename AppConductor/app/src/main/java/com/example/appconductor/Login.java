@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.example.appconductor.Solicitudes.Solicitud_2;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -72,7 +73,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(Login.this, BottomNav.class));
+                    startActivity(new Intent(Login.this, Solicitud_2.class));
                     finish();
                 } else {
                     Toast.makeText(Login.this, "No se pudo iniciar sesión. Compruebe los datos", Toast.LENGTH_SHORT).show();

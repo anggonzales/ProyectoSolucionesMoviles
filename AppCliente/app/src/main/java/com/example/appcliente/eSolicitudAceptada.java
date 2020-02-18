@@ -1,4 +1,4 @@
-package com.example.appconductor.Solicitudes;
+package com.example.appcliente;
 
 public class eSolicitudAceptada {
     private String id;
@@ -13,6 +13,29 @@ public class eSolicitudAceptada {
     private int estado;
 
     public eSolicitudAceptada() {
+    }
+
+
+    public eSolicitudAceptada(String nombre_cliente_1, String nombre_cliente_2, String nombre_conductor, Double latitud, Double longitud, Double costo, int estado) {
+        this.id = id;
+        this.nombre_cliente_1 = nombre_cliente_1;
+        this.nombre_cliente_2 = nombre_cliente_2;
+        this.nombre_conductor = nombre_conductor;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.costo = costo;
+        this.estado = estado;
+    }
+
+    public eSolicitudAceptada(String nombre_cliente_1, String nombre_cliente_2, String nombre_cliente_3, String nombre_conductor, Double latitud, Double longitud, Double costo, int estado) {
+        this.nombre_cliente_1 = nombre_cliente_1;
+        this.nombre_cliente_2 = nombre_cliente_2;
+        this.nombre_cliente_3 = nombre_cliente_3;
+        this.nombre_conductor = nombre_conductor;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.costo = costo;
+        this.estado = estado;
     }
 
     public eSolicitudAceptada(String nombre_cliente_1, String nombre_cliente_2, String nombre_cliente_3, String nombre_cliente_4, String nombre_conductor, Double latitud, Double longitud, Double costo, int estado) {

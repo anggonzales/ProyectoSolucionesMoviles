@@ -53,7 +53,10 @@
                     android:layout_marginTop="10dp"
                     android:background="#0A245F"
                     android:text="Usuarios"
+                    android:onClick="detalle"
                     android:textColor="@color/white" />
+
+
             </LinearLayout>
         </LinearLayout>
 </ScrollView>

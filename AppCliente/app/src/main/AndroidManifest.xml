@@ -12,14 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VerRutas"></activity>
-        <activity android:name=".NuevoPunto"/>
+        <activity android:name=".RutaUsuarios"></activity>
+        <activity android:name=".UnirseRuta" />
+        <activity android:name=".VerRutas" />
+        <activity android:name=".NuevoPunto" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDxU6BvTLw6VVHnyiaDfSyc0hiv0v-n8B0" />
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
         <activity android:name=".Inicio" />
         <activity android:name=".Registro" />
         <activity android:name=".Login" />
@@ -31,4 +36,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
