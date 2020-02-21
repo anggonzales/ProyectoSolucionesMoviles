@@ -8,8 +8,10 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +39,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -67,7 +70,8 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     //LatLng ubicacion;
     public double longitude = 0.0;
     public double latitude = 0.0;
-
+    View btncs;
+    FirebaseAuth mAuth;
     String nombre_cliente = "Angel Gonzales";
 
     final private String FCM_API = "https://fcm.googleapis.com/fcm/send";
@@ -107,6 +111,8 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
                         "Sin el permiso" + " de ubicacion no podremos localizarte", 1);
             }
         }
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 // Navigation Drawer
@@ -283,5 +289,26 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
                         "Sin el permiso" + " de ubicacion no podremos localizarte", 0);
             }
         }
+    }
+    //menu cerrar sesion
+    @Override public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu1, menu);
+        return true;
+    }
+    @Override public boolean onOptionsItemSelected(MenuItem item) {
+         btncs= findViewById(R.id.cerrar_sesion);
+        mAuth=FirebaseAuth.getInstance();
+        int id = item.getItemId();
+        if (id == R.id.cerrar_sesion) {
+            btncs.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mAuth.signOut();
+                    startActivity(new Intent(Inicio.this,Login.class));
+                    finish();
+                }
+            });
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
