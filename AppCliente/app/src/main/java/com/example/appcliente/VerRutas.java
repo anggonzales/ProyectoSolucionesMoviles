@@ -14,6 +14,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -27,6 +28,8 @@ public class VerRutas extends AppCompatActivity {
     private static final String PATH_SOLICITUDES_ACEPTADAS = "SOLICITUDES_ACEPTADAS";
     FirebaseDatabase database;
     DatabaseReference reference;
+    Query query;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +46,16 @@ public class VerRutas extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        AddItems();
+        query = FirebaseDatabase.getInstance().getReference("SOLICITUDES_ACEPTADAS")
+                .orderByChild("estado")
+                .equalTo(0);
+
+        ConsultaRutasactivas();
+
     }
 
-    void AddItems() {
-        reference.addChildEventListener(new ChildEventListener() {
+    void ConsultaRutasactivas(){
+        query.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 eSolicitudAceptada objsolicitud = dataSnapshot.getValue(eSolicitudAceptada.class);
