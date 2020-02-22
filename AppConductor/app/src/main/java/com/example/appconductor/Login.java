@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 
@@ -21,9 +24,12 @@ public class Login extends AppCompatActivity {
 
     Button btn_ir_crearCuenta, iniciar_sesion;
 
+    private SharedPreferences prefs;
+    private boolean login;
     private EditText correo, contraseña;
 
 
+    ProgressBar progresbar ;
     private String email = "";
     private String clave = "";
     FirebaseAuth mAuth;
@@ -31,6 +37,7 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login);
 
         correo = (EditText) findViewById(R.id.et_correo);
@@ -39,7 +46,7 @@ public class Login extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         btn_ir_crearCuenta = findViewById(R.id.btn_ir_crearCuenta);
         iniciar_sesion = findViewById(R.id.iniciar_sesion);
-
+        progresbar = findViewById(R.id.progresslogin);
 
         btn_ir_crearCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,17 +57,25 @@ public class Login extends AppCompatActivity {
         });
 
         iniciar_sesion.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
+                progresbar.setVisibility(View.VISIBLE);
                 email = correo.getText().toString();
                 clave = contraseña.getText().toString();
+
                 if (!email.isEmpty() && !clave.isEmpty()) {
                     Toast.makeText(Login.this, "Bienvendio Usuario:" + email, Toast.LENGTH_SHORT).show();
+
                     conductorlogin();
+
+
+
                 } else {
                     Toast.makeText(Login.this, "Debe completar los campos", Toast.LENGTH_SHORT).show();
                 }
-
+                progresbar.setVisibility(View.GONE);
                 //startActivity(new Intent(Login.this, Solicitud.class));
                 //Aquí codigo
             }

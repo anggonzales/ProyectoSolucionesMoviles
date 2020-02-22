@@ -37,6 +37,8 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.appconductor.RutasUsuarios" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyApOTFfvxhFlfpbFDQDQfZxm2sN_SxG2sc" />
@@ -47,29 +49,24 @@
 
         <activity android:name="com.example.appconductor.Solicitudes.SolicitudMapa" />
         <activity android:name="com.example.appconductor.Solicitudes.DetalleSolicitud" />
-        <activity android:name="com.example.appconductor.EnMarcha" />
-        <!-- <activity android:name=".MainActivity" /> -->
+        <activity android:name="com.example.appconductor.EnMarcha" /> <!-- <activity android:name=".MainActivity" /> -->
         <activity android:name="com.example.appconductor.SignUp" />
         <activity android:name="com.example.appconductor.BottomNav" />
-        <activity android:name="com.example.appconductor.Login" />
-        <activity android:name="com.example.appconductor.Solicitudes.Solicitud" />
         <activity android:name="com.example.appconductor.Solicitudes.Solicitud_2" />
-        <!--
-        <activity android:name=".Solicitudes.Solicitud_2">
+        <activity android:name="com.example.appconductor.MainActivity" />
+        <activity android:name="com.example.appconductor.Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        -->
-        <activity android:name="com.example.appconductor.MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <service android:name="com.example.appconductor.Solicitudes.ServicioAceptacion" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </activity>
+        </service>
         <!--
              FirebaseMessagingService performs security checks at runtime,
              but set to not exported to explicitly avoid allowing another app to call it.
