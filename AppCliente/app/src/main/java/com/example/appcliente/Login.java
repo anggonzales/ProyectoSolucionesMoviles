@@ -62,4 +62,8 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+    public void nuevor(View view) {
+        startActivity(new Intent(this,Registro.class));
+    }
 }

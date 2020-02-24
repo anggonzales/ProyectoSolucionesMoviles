@@ -24,7 +24,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtusu"
         android:layout_marginBottom="10dp"
-        android:layout_width="390dp"
+        android:layout_width="360dp"
         android:hint="E-mail"
         app:endIconMode="clear_text"
         app:startIconDrawable="@mipmap/correo"
@@ -42,7 +42,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
-        android:layout_width="390dp"
+        android:layout_width="360dp"
         android:hint="Password"
         app:startIconDrawable="@mipmap/password"
         app:endIconMode="password_toggle"
@@ -60,15 +60,40 @@
 
     <Button
         android:id="@+id/btnlogin"
-        android:text="Ingresar"
-        android:layout_marginTop="160dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="Ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:text="¿Aún no tienes cuenta?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/r"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.378" />
+
+    <TextView
+        android:id="@+id/r"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+        android:onClick="nuevor"
+        android:text="Registrate"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596" />
 </androidx.constraintlayout.widget.ConstraintLayout>

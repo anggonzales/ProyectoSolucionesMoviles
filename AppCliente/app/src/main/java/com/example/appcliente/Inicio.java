@@ -173,7 +173,7 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.activity_micuenta:
-                startActivity(new Intent(this, Login.class));
+                startActivity(new Intent(this, PerfilUsuario.class));
                 break;
             case R.id.activity_historial:
                 startActivity(new Intent(this, Login.class));
@@ -294,27 +294,7 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
             }
         }
     }
-    //menu cerrar sesion
-    @Override public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu1, menu);
-        return true;
-    }
-    @Override public boolean onOptionsItemSelected(MenuItem item) {
-        btncs= findViewById(R.id.cerrar_sesion);
-        mAuth=FirebaseAuth.getInstance();
-        int id = item.getItemId();
-        if (id == R.id.cerrar_sesion) {
-            btncs.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mAuth.signOut();
-                    startActivity(new Intent(Inicio.this,Login.class));
-                    finish();
-                }
-            });
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
     private void Infouser(){
         fdb=FirebaseDatabase.getInstance().getReference();
         mAuth=FirebaseAuth.getInstance();

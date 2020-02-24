@@ -2,4 +2,8 @@
     <string name="app_name">AppCliente</string>
     <string name="drawer_open">abrir</string>
     <string name="drawer_close">cerrar</string>
+    <string name="miperfil"><b>Mi Perfil</b></string>
+    <string name="nombre_usuario"><b>Nombre de Usuario</b></string>
+    <string name="telefono"><b>Telefono</b></string>
+    <string name="email"><b>E-mail</b></string>
 </resources>
