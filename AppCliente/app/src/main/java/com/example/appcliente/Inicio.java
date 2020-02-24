@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -40,8 +41,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -57,8 +61,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Inicio extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback,
-        GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMapClickListener {
+
+public class Inicio extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,OnMapReadyCallback,
+        GoogleMap.OnInfoWindowClickListener,GoogleMap.OnMapClickListener {
     GoogleMap mapa;
     ArrayList<Marker> markers = new ArrayList<>();
     @BindView(R.id.txtLatitud)
@@ -72,6 +77,7 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     public double latitude = 0.0;
     View btncs;
     FirebaseAuth mAuth;
+    DatabaseReference fdb;
     String nombre_cliente = "Angel Gonzales";
 
     final private String FCM_API = "https://fcm.googleapis.com/fcm/send";
@@ -89,15 +95,33 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     DatabaseReference reference;
     private static final String PATH_PRODUCTO = "SOLICITUDES";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inicio);
-
-        ButterKnife.bind(this);
+        setContentView(R.layout.drawer_layout);
         SupportMapFragment mapFragment = (SupportMapFragment)
                 getSupportFragmentManager().findFragmentById(R.id.mapa);
         mapFragment.getMapAsync(this);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+// Navigation Drawer
+        DrawerLayout drawer = (DrawerLayout) findViewById(
+                R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
+                drawer, toolbar, R.string.drawer_open, R.string. drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        NavigationView navigationView = (NavigationView) findViewById(
+                R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        Infouser();
+
+        ButterKnife.bind(this);
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference(PATH_PRODUCTO);
 
         if ((ContextCompat.checkSelfPermission(Inicio.this,
                 android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED)){
@@ -112,22 +136,6 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
             }
         }
 
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-// Navigation Drawer
-        DrawerLayout drawer = (DrawerLayout) findViewById(
-                R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
-                drawer, toolbar, R.string.drawer_open, R.string. drawer_close);
-       /* drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        NavigationView navigationView = (NavigationView) findViewById(
-                R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);*/
-
-        database = FirebaseDatabase.getInstance();
-        reference = database.getReference(PATH_PRODUCTO);
     }
 
     @Override
@@ -147,7 +155,6 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
         longitude = latLng.longitude;
     }
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mapa = googleMap;
@@ -161,7 +168,6 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
             mapa.setOnMapClickListener(this);
         }
     }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -186,7 +192,6 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(
@@ -199,13 +204,12 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     }
 
     public void ver(View view) {
-        startActivity(new Intent(this, VerRutas.class));
+        startActivity(new Intent(this,VerRutas.class));
     }
 
     public void nuevo(View view) {
-        startActivity(new Intent(this, NuevoPunto.class));
+        startActivity(new Intent(this,NuevoPunto.class));
     }
-
     @OnClick(R.id.btnguardar)
     public void onViewClicked() {
         Toast.makeText(this, "Registrado", Toast.LENGTH_LONG).show();
@@ -296,7 +300,7 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
         return true;
     }
     @Override public boolean onOptionsItemSelected(MenuItem item) {
-         btncs= findViewById(R.id.cerrar_sesion);
+        btncs= findViewById(R.id.cerrar_sesion);
         mAuth=FirebaseAuth.getInstance();
         int id = item.getItemId();
         if (id == R.id.cerrar_sesion) {
@@ -310,5 +314,28 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
             });
         }
         return super.onOptionsItemSelected(item);
+    }
+    private void Infouser(){
+        fdb=FirebaseDatabase.getInstance().getReference();
+        mAuth=FirebaseAuth.getInstance();
+        String id=mAuth.getCurrentUser().getUid();
+        fdb.child("USUARIOS").child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                TextView dnombre=findViewById(R.id.dnombre);
+                TextView dcorreo=findViewById(R.id.dcorreo);
+                if(dataSnapshot.exists()){
+                    String nombre=dataSnapshot.child("usuario").getValue().toString();
+                    String correo=dataSnapshot.child("correo").getValue().toString();
+                    dnombre.setText(nombre);
+                    dcorreo.setText(correo);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }
