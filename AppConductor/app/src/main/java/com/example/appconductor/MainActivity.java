@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
+    private FirebaseAuth autentica;
     Button ir_login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,4 +38,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void mifinalizar(View view) {
     }
+
+
+    //para verificar si esta iniciado seccion
+   /* @Override
+    protected void onStart() {
+        super.onStart();
+        if(autentica.getCurrentUser() != null)
+        {
+            startActivity(new Intent( MainActivity.this, Principal.class));
+            finish();
+
+        }
+    }*/
 }

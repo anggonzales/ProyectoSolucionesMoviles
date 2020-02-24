@@ -66,7 +66,7 @@ public class Login extends AppCompatActivity {
                 clave = contraseña.getText().toString();
 
                 if (!email.isEmpty() && !clave.isEmpty()) {
-                    Toast.makeText(Login.this, "Bienvendio Usuario:" + email, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Bienvendio :" + email, Toast.LENGTH_SHORT).show();
 
                     conductorlogin();
 
@@ -88,7 +88,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(Login.this, Solicitud_2.class));
+                    startActivity(new Intent(Login.this, Principal.class));
                     finish();
                 } else {
                     Toast.makeText(Login.this, "No se pudo iniciar sesión. Compruebe los datos", Toast.LENGTH_SHORT).show();

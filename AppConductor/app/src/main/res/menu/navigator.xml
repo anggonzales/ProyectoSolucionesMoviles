@@ -22,4 +22,16 @@
             android:icon="@mipmap/acerca"
             />
     </group>
+    <item android:title="Acciones adicionales">
+        <menu>
+            <item android:id="@+id/nav_compartir"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="Compartir" />
+            <item android:id="@+id/nav_salir"
+                android:icon="@android:drawable/ic_menu_manage"
+                android:title="Salir" />
+        </menu>
+    </item>
+
+
 </menu>
