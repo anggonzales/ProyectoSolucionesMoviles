@@ -50,6 +50,11 @@ public class AdaptadorDetalleSolicitud extends RecyclerView.Adapter<AdaptadorDet
                 intent.putExtra("cliente2", datos.get(i).getNombre_cliente_2());
                 intent.putExtra("cliente3", datos.get(i).getNombre_cliente_3());
                 intent.putExtra("cliente4", datos.get(i).getNombre_cliente_4());
+                intent.putExtra("latitud", datos.get(i).getLatitud());
+                intent.putExtra("longitud", datos.get(i).getLongitud());
+                intent.putExtra("id", datos.get(i).getId());
+                intent.putExtra("costo", datos.get(i).getCosto());
+                intent.putExtra("conductor", datos.get(i).getNombre_conductor());
                 micontextsolicitud.startActivity(intent);
             }
         });

@@ -21,6 +21,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class Solicitud_2 extends AppCompatActivity {
     private static final String PATH_SOLICITUD = "SOLICITUDES";
     FirebaseDatabase database;
     DatabaseReference reference;
+    Query query;
     private ArrayList<eSolicitud> misdatos;
 
     @Override
@@ -48,12 +50,17 @@ public class Solicitud_2 extends AppCompatActivity {
         recyclerView.setAdapter(adaptador);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+        query = FirebaseDatabase.getInstance().getReference("SOLICITUDES")
+                .orderByChild("estado")
+                .equalTo(0);
+
         AddItems();
 
     }
 
     void AddItems() {
-        reference.addChildEventListener(new ChildEventListener() {
+        query.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 eSolicitud objsolicitud = dataSnapshot.getValue(eSolicitud.class);

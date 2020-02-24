@@ -34,6 +34,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, final int i) {
         holder.titulo.setText("Solicitud Nro : " + i);
+        holder.costo.setText("Costo : S/ " + datos.get(i).getCosto().toString());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,7 +75,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
         return datos.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView titulo, subtitutlo;
+        public TextView titulo, costo;
         public ImageView icon;
         public Button miboton;
         public Button btnUser;
@@ -82,6 +83,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
             super(itemView);
             titulo = (TextView)itemView.findViewById(R.id.titulo);
             miboton= itemView.findViewById(R.id.btnver);
+            costo = itemView.findViewById(R.id.costoservice);
             btnUser = (Button) itemView.findViewById(R.id.btnUsuarios);
         }
     }

@@ -209,7 +209,7 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     @OnClick(R.id.btnguardar)
     public void onViewClicked() {
         Toast.makeText(this, "Registrado", Toast.LENGTH_LONG).show();
-        Solicitud solicitud = new Solicitud(nombre_cliente, latitude, longitude);
+        Solicitud solicitud = new Solicitud(nombre_cliente, latitude, longitude, 0);
         reference.push().setValue(solicitud);
 
         TOPIC = "/topics/userABC"; //topic has to match what the receiver subscribed to

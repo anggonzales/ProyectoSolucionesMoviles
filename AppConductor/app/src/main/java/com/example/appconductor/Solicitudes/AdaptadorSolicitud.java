@@ -51,6 +51,7 @@ public class AdaptadorSolicitud extends RecyclerView.Adapter<AdaptadorSolicitud.
                 intent.putExtra("cliente", datos.get(i).getNombre_cliente());
                 intent.putExtra("latitud", datos.get(i).getLatitud());
                 intent.putExtra("longitud" , datos.get(i).getLongitud());
+                intent.putExtra("id", datos.get(i).getId());
                 micontextsolicitud.startActivity(intent);
             }
         });

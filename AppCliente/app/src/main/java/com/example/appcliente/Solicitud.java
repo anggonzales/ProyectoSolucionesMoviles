@@ -6,6 +6,10 @@ public class Solicitud {
     private Double latitud;
     private Double longitud;
 
+
+
+    private int estado;
+
     public Solicitud() {
     }
 
@@ -14,6 +18,13 @@ public class Solicitud {
         this.nombre_cliente = nombre_cliente;
         this.latitud = latitud;
         this.longitud = longitud;
+    }
+
+    public Solicitud(String nombre_cliente, Double latitud, Double longitud, int estado) {
+        this.nombre_cliente = nombre_cliente;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.estado = estado;
     }
 
     public Solicitud(String nombre_cliente, Double latitud, Double longitud) {
@@ -52,5 +63,12 @@ public class Solicitud {
 
     public void setLongitud(Double longitud) {
         this.longitud = longitud;
+    }
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
     }
 }

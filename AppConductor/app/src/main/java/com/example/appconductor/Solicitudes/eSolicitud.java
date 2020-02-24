@@ -5,6 +5,19 @@ public class eSolicitud {
     private String nombre_cliente;
     private Double latitud;
     private Double longitud;
+    private int estado;
+
+
+
+    public eSolicitud(String id, String nombre_cliente, Double latitud, Double longitud, int estado) {
+        this.id = id;
+        this.nombre_cliente = nombre_cliente;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.estado = estado;
+    }
+
+
 
     public eSolicitud() {
     }
@@ -52,5 +65,13 @@ public class eSolicitud {
 
     public void setLongitud(Double longitud) {
         this.longitud = longitud;
+    }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
     }
 }

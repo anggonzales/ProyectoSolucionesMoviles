@@ -1,5 +1,6 @@
 package com.example.appconductor.Solicitudes;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -25,6 +28,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -34,6 +40,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,6 +52,8 @@ public class SolicitudMapa extends AppCompatActivity implements OnMapReadyCallba
     Double longitud;
     EditText edtTitle;
     EditText edtcostoServicio;
+    String id = "";
+    private ArrayList<eSolicitud> misdatos;
 
     final private String FCM_API = "https://fcm.googleapis.com/fcm/send";
     final private String serverKey = "key=" + "AAAA3XgOE3s:APA91bEDVmszemFXDWb3FEcE2PWndRMa9OyOTVqNwlfkhN-7lrGOO_w1XS2zRH4XKQOCo1rxxITK3_Ljvn7h3CBibZZlj2HhhhDhCcn7cGdxKg9HCMxpKCCEKoooy3RqUvU4Xt1-MQ-R";
@@ -61,8 +70,9 @@ public class SolicitudMapa extends AppCompatActivity implements OnMapReadyCallba
     private static final String PATH_SOLICITUD_ACEPTADA = "SOLICITUDES_ACEPTADAS";
     FirebaseDatabase database;
     DatabaseReference reference;
+    DatabaseReference reference_solicitud;
     int estado = 0;
-
+    private static final String PATH_SOLICITUD = "SOLICITUDES";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +83,8 @@ public class SolicitudMapa extends AppCompatActivity implements OnMapReadyCallba
         mapFragment.getMapAsync(this);
         Bundle extras = getIntent().getExtras();
 
+        misdatos = new ArrayList<>();
+        id = extras.getString("id");
         cliente = extras.getString("cliente");
         latitud = extras.getDouble("latitud");
         longitud = extras.getDouble("longitud");
@@ -81,6 +93,9 @@ public class SolicitudMapa extends AppCompatActivity implements OnMapReadyCallba
         edtcostoServicio = findViewById(R.id.edtcostoServicio);
         Button btnAceptar = findViewById(R.id.btnaceptar);
         reference = FirebaseDatabase.getInstance().getReference(PATH_SOLICITUD_ACEPTADA);
+        reference_solicitud = FirebaseDatabase.getInstance().getReference(PATH_SOLICITUD);
+        AlmacenarenArray();
+
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,9 +112,19 @@ public class SolicitudMapa extends AppCompatActivity implements OnMapReadyCallba
                 } catch (JSONException e) {
                     Log.e(TAG, "onCreate: " + e.getMessage());
                 }
+
                 sendNotification(notification);
                 eSolicitudAceptada saceptada = new eSolicitudAceptada(cliente,"","","",conductor, latitud, longitud, Double.valueOf(edtcostoServicio.getText().toString()), estado);
                 reference.push().setValue(saceptada);
+
+
+                eSolicitud sestado = new eSolicitud(id, cliente, latitud, longitud, 1);
+                eSolicitud soupdate = getSolicitud(sestado.getId());
+                if (soupdate != null) {
+                    reference_solicitud.child(soupdate.getId()).setValue(sestado);
+                    Toast.makeText(SolicitudMapa.this, "Registrado con éxito", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(SolicitudMapa.this , Solicitud_2.class));
+                }
             }
         });
         FirebaseInstanceId.getInstance().getInstanceId()
@@ -110,6 +135,15 @@ public class SolicitudMapa extends AppCompatActivity implements OnMapReadyCallba
                         FirebaseMessaging.getInstance().subscribeToTopic(SUBSCRIBE_TO);
                     }
                 });
+    }
+
+    eSolicitud getSolicitud(String id) {
+        for (eSolicitud solicitud_obj : misdatos) {
+            if (solicitud_obj.getId().equals(id)) {
+                return solicitud_obj;
+            }
+        }
+        return null;
     }
 
     @Override
@@ -143,7 +177,6 @@ public class SolicitudMapa extends AppCompatActivity implements OnMapReadyCallba
                     public void onResponse(JSONObject response) {
                         Log.i(TAG, "onResponse: " + response.toString());
 
-
                     }
                 },
                 new Response.ErrorListener() {
@@ -162,5 +195,39 @@ public class SolicitudMapa extends AppCompatActivity implements OnMapReadyCallba
             }
         };
         MySingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectRequest);
+    }
+
+    void AlmacenarenArray() {
+        reference_solicitud.addChildEventListener(new ChildEventListener() {
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                eSolicitud objsolicitud = dataSnapshot.getValue(eSolicitud.class);
+                objsolicitud.setId(dataSnapshot.getKey());
+                if (!misdatos.contains(objsolicitud)) {
+                    misdatos.add(objsolicitud);
+                }
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }
