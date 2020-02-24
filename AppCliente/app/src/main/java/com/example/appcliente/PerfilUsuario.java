@@ -19,6 +19,7 @@ public class PerfilUsuario extends AppCompatActivity {
     FirebaseAuth mAuth;
     DatabaseReference fdb;
     TextView n,nombre,telefono,correo;
+    static String NombreUsuario;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +33,7 @@ public class PerfilUsuario extends AppCompatActivity {
         nombre.setText(R.string.nombre_usuario);
         telefono.setText(R.string.telefono);
         correo.setText(R.string.email);
+        NombreUsuario = nombre.toString();
         Infouser();
     }
     private void Infouser(){

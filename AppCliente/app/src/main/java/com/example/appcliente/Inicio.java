@@ -78,7 +78,8 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     View btncs;
     FirebaseAuth mAuth;
     DatabaseReference fdb;
-    String nombre_cliente = "Angel Gonzales";
+    String nombre;
+    //String nombre_cliente = PerfilUsuario.NombreUsuario;
 
     final private String FCM_API = "https://fcm.googleapis.com/fcm/send";
     final private String serverKey = "key=" + "AAAA3XgOE3s:APA91bEDVmszemFXDWb3FEcE2PWndRMa9OyOTVqNwlfkhN-7lrGOO_w1XS2zRH4XKQOCo1rxxITK3_Ljvn7h3CBibZZlj2HhhhDhCcn7cGdxKg9HCMxpKCCEKoooy3RqUvU4Xt1-MQ-R";
@@ -213,12 +214,12 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     @OnClick(R.id.btnguardar)
     public void onViewClicked() {
         Toast.makeText(this, "Registrado", Toast.LENGTH_LONG).show();
-        Solicitud solicitud = new Solicitud(nombre_cliente, latitude, longitude, 0);
+        Solicitud solicitud = new Solicitud(nombre, latitude, longitude, 0);
         reference.push().setValue(solicitud);
 
         TOPIC = "/topics/userABC"; //topic has to match what the receiver subscribed to
         NOTIFICATION_TITLE = "Aviso de Servicio";
-        NOTIFICATION_MESSAGE = "Presione para ver la solicitud " + nombre_cliente;
+        NOTIFICATION_MESSAGE = "Presione para ver la solicitud " + nombre;
         JSONObject notification = new JSONObject();
         JSONObject notifcationBody = new JSONObject();
         try {
@@ -305,7 +306,7 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
                 TextView dnombre=findViewById(R.id.dnombre);
                 TextView dcorreo=findViewById(R.id.dcorreo);
                 if(dataSnapshot.exists()){
-                    String nombre=dataSnapshot.child("usuario").getValue().toString();
+                    nombre=dataSnapshot.child("usuario").getValue().toString();
                     String correo=dataSnapshot.child("correo").getValue().toString();
                     dnombre.setText(nombre);
                     dcorreo.setText(correo);
