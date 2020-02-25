@@ -306,7 +306,7 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
                 TextView dnombre=findViewById(R.id.dnombre);
                 TextView dcorreo=findViewById(R.id.dcorreo);
                 if(dataSnapshot.exists()){
-                    nombre=dataSnapshot.child("usuario").getValue().toString();
+                    nombre = dataSnapshot.child("usuario").getValue().toString();
                     String correo=dataSnapshot.child("correo").getValue().toString();
                     dnombre.setText(nombre);
                     dcorreo.setText(correo);

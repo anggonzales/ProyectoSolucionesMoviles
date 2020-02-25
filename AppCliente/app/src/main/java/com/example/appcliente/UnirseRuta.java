@@ -61,7 +61,7 @@ public class UnirseRuta extends AppCompatActivity implements OnMapReadyCallback,
     final private String serverKey = "key=" + "AAAA3XgOE3s:APA91bEDVmszemFXDWb3FEcE2PWndRMa9OyOTVqNwlfkhN-7lrGOO_w1XS2zRH4XKQOCo1rxxITK3_Ljvn7h3CBibZZlj2HhhhDhCcn7cGdxKg9HCMxpKCCEKoooy3RqUvU4Xt1-MQ-R";
     final private String contentType = "application/json";
     final String TAG = "NOTIFICATION TAG";
-    String conductor = "Fernando Paredes Villa";
+    String conductor;
     String cliente;
     String cliente2;
     String cliente3;
@@ -95,6 +95,7 @@ public class UnirseRuta extends AppCompatActivity implements OnMapReadyCallback,
         cliente3 = extras.getString("cliente4");
         cliente2 = extras.getString("cliente2");
         cliente = extras.getString("cliente1");
+        conductor = extras.getString("conductor");
         ubicacion = new LatLng(latitud, longitud);
         Button btnAceptar = findViewById(R.id.btnaceptar);
         reference = FirebaseDatabase.getInstance().getReference(PATH_SOLICITUD_ACEPTADA);

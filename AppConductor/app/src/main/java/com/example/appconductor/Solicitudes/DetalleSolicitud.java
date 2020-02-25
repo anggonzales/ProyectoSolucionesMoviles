@@ -9,12 +9,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.appconductor.Principal;
 import com.example.appconductor.R;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.annotations.Nullable;
 
 import java.util.ArrayList;
@@ -27,6 +29,9 @@ public class DetalleSolicitud extends AppCompatActivity {
     private static final String PATH_SOLICITUD_ACEPTADA = "SOLICITUDES_ACEPTADAS";
     FirebaseDatabase database;
     DatabaseReference reference;
+    Query query;
+    Query query2;
+    String conductor;
     private ArrayList<eSolicitudAceptada> misdatos;
 
     @Override
@@ -42,11 +47,19 @@ public class DetalleSolicitud extends AppCompatActivity {
         recyclerView.setAdapter(adaptador);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+        conductor = Principal.nombreConductor;
+
+        query = FirebaseDatabase.getInstance().getReference("SOLICITUDES_ACEPTADAS")
+                .orderByChild("nombre_conductor")
+                .equalTo(conductor);
+
+
         AddItems();
     }
 
     void AddItems() {
-        reference.addChildEventListener(new ChildEventListener() {
+        query.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 eSolicitudAceptada objsolicitud = dataSnapshot.getValue(eSolicitudAceptada.class);

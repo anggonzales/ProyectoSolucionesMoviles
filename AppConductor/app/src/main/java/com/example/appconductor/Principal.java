@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.appconductor.Solicitudes.DetalleSolicitud;
 import com.example.appconductor.Solicitudes.Solicitud_2;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,6 +27,8 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
 
     private FirebaseAuth autentica;
     private DatabaseReference misdatos;
+    public static String nombreConductor;
+    String nombreuser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,6 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
 
         autentica = FirebaseAuth.getInstance();
         misdatos = FirebaseDatabase.getInstance().getReference();
-
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -50,6 +52,8 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
         NavigationView navigationView = (NavigationView) findViewById(
                 R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
 
         obtenerinfo();
     }
@@ -76,6 +80,10 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
                 startActivity(new Intent(this, Solicitud_2.class));
                 finish();
                 break;
+            case R.id.activity_enmarcha:
+                startActivity(new Intent(this, DetalleSolicitud.class));
+                finish();
+                break;
             default:
                 break;
         }
@@ -85,7 +93,16 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
         return true;
     }
 
-
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(
+                R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
     private  void obtenerinfo()
     {
@@ -102,12 +119,13 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
                 //verificar si existe
                 if(dataSnapshot.exists())
                 {
-                    String name = dataSnapshot.child("usuario").getValue().toString();
+                    nombreuser = dataSnapshot.child("usuario").getValue().toString();
                     String email = dataSnapshot.child("correo").getValue().toString();
 
 //modificar de aqui sale un error al imprimir los datos del usuario
-                   usuarios.setText(name);
+                   usuarios.setText(nombreuser);
                     correos.setText(email);
+                    nombreConductor = nombreuser.toString();
 
                 }
 

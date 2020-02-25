@@ -19,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.appconductor.MySingleton;
+import com.example.appconductor.Principal;
 import com.example.appconductor.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -64,7 +65,7 @@ public class SolicitudMapa extends AppCompatActivity implements OnMapReadyCallba
     String TOPIC = "/topics/userABC";
     String SUBSCRIBE_TO = "userABC";
     String aviso = "Aviso de Aceptación";
-    String conductor = "Fernando Paredes Villa";
+    String conductor = Principal.nombreConductor;
     String cliente;
 
     private static final String PATH_SOLICITUD_ACEPTADA = "SOLICITUDES_ACEPTADAS";

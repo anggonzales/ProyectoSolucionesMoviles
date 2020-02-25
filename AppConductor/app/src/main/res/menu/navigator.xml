@@ -6,7 +6,7 @@
             android:orderInCategory="2"
             android:icon="@mipmap/solictiud_foreground"
             />
-        <item android:title="En Marcha"
+        <item android:title="Aceptadas"
             android:id="@+id/activity_enmarcha"
             android:orderInCategory="2"
             android:icon="@mipmap/en_marcha"

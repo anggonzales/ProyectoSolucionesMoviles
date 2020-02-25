@@ -3,6 +3,7 @@ package com.example.appconductor.Solicitudes;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,6 +43,8 @@ public class Solicitud_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mi_item);
+
+
         database = FirebaseDatabase.getInstance();
         reference = database.getReference(PATH_SOLICITUD);
         misdatos = new ArrayList<>();
@@ -115,7 +119,10 @@ public class Solicitud_2 extends AppCompatActivity {
         });
     }
 
+
     public void detalle(View view) {
         startActivity(new Intent(this, DetalleSolicitud.class));
     }
+
+
 }

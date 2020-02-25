@@ -35,7 +35,7 @@
             android:id="@+id/ir_login"
             android:background="@drawable/btn_redondeado_white"
             android:layout_marginLeft="20dp"
-            android:textColor="#403f3f"
+            android:textColor="#fff"
             android:elevation="5dp"
             android:layout_marginBottom="30dp"
             android:textSize="16dp"
