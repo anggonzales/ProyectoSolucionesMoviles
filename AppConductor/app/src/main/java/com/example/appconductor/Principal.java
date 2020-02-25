@@ -36,8 +36,7 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
         autentica = FirebaseAuth.getInstance();
         misdatos = FirebaseDatabase.getInstance().getReference();
 
-        usuarios = findViewById(R.id.nombusu);
-        correos = findViewById(R.id.correusu);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -90,10 +89,16 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
 
     private  void obtenerinfo()
     {
+        autentica = FirebaseAuth.getInstance();
+        misdatos = FirebaseDatabase.getInstance().getReference();
+
         String id = autentica.getCurrentUser().getUid();
         misdatos.child("CONDUCTOR").child(id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                TextView usuarios = findViewById(R.id.nombusu);
+                TextView correos = findViewById(R.id.correusu);
                 //verificar si existe
                 if(dataSnapshot.exists())
                 {
@@ -101,8 +106,8 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
                     String email = dataSnapshot.child("correo").getValue().toString();
 
 //modificar de aqui sale un error al imprimir los datos del usuario
-                   /* usuarios.setText(name);
-                    correos.setText(email);*/
+                   usuarios.setText(name);
+                    correos.setText(email);
 
                 }
 

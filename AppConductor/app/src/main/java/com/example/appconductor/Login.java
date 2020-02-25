@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class Login extends AppCompatActivity {
     ProgressBar progresbar ;
     private String email = "";
     private String clave = "";
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,8 @@ public class Login extends AppCompatActivity {
         contraseña = (EditText) findViewById(R.id.et_contrasena);
         //iniciar_sesion=(Button) findViewById(R.id.iniciar_sesion);
         mAuth = FirebaseAuth.getInstance();
+
+
         btn_ir_crearCuenta = findViewById(R.id.btn_ir_crearCuenta);
         iniciar_sesion = findViewById(R.id.iniciar_sesion);
         progresbar = findViewById(R.id.progresslogin);
@@ -97,5 +100,7 @@ public class Login extends AppCompatActivity {
         });
 
     }
+
+
 }
 
