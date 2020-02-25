@@ -20,6 +20,7 @@ public class PerfilUsuario extends AppCompatActivity {
     DatabaseReference fdb;
     TextView n,nombre,telefono,correo;
     static String NombreUsuario;
+    String nombreuser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,6 @@ public class PerfilUsuario extends AppCompatActivity {
         nombre.setText(R.string.nombre_usuario);
         telefono.setText(R.string.telefono);
         correo.setText(R.string.email);
-        NombreUsuario = nombre.toString();
         Infouser();
     }
     private void Infouser(){
@@ -47,12 +47,13 @@ public class PerfilUsuario extends AppCompatActivity {
                 TextView dtel=findViewById(R.id.mtel);
                 TextView dcorreo=findViewById(R.id.mcorreo);
                 if(dataSnapshot.exists()){
-                    String nombre=dataSnapshot.child("usuario").getValue().toString();
+                    nombreuser =dataSnapshot.child("usuario").getValue().toString();
                     String tel=dataSnapshot.child("telefono").getValue().toString();
                     String correo=dataSnapshot.child("correo").getValue().toString();
-                    dnombre.setText(nombre);
+                    dnombre.setText(nombreuser);
                     dtel.setText(tel);
                     dcorreo.setText(correo);
+                    NombreUsuario = nombreuser;
                 }
             }
 

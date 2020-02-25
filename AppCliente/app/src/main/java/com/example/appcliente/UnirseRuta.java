@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,11 +27,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -58,11 +61,6 @@ public class UnirseRuta extends AppCompatActivity implements OnMapReadyCallback,
     final private String serverKey = "key=" + "AAAA3XgOE3s:APA91bEDVmszemFXDWb3FEcE2PWndRMa9OyOTVqNwlfkhN-7lrGOO_w1XS2zRH4XKQOCo1rxxITK3_Ljvn7h3CBibZZlj2HhhhDhCcn7cGdxKg9HCMxpKCCEKoooy3RqUvU4Xt1-MQ-R";
     final private String contentType = "application/json";
     final String TAG = "NOTIFICATION TAG";
-    String NOTIFICATION_TITLE;
-    String NOTIFICATION_MESSAGE;
-    String TOPIC = "/topics/userABC";
-    String SUBSCRIBE_TO = "userABC";
-    String aviso = "Aviso de Aceptación";
     String conductor = "Fernando Paredes Villa";
     String cliente;
     String cliente2;
@@ -73,6 +71,9 @@ public class UnirseRuta extends AppCompatActivity implements OnMapReadyCallback,
     private static final String PATH_SOLICITUD_ACEPTADA = "SOLICITUDES_ACEPTADAS";
     FirebaseDatabase database;
     DatabaseReference reference;
+    FirebaseAuth mAuth;
+    DatabaseReference fdb;
+    String nombre;
 
 
     @Override
@@ -98,68 +99,47 @@ public class UnirseRuta extends AppCompatActivity implements OnMapReadyCallback,
         Button btnAceptar = findViewById(R.id.btnaceptar);
         reference = FirebaseDatabase.getInstance().getReference(PATH_SOLICITUD_ACEPTADA);
         AlmacenarenArray();
-        /*btnAceptar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*TOPIC = "/topics/userABC"; //topic has to match what the receiver subscribed to
-                NOTIFICATION_TITLE = aviso;
-                NOTIFICATION_MESSAGE = "Su solicitud ha sido aceptada. El costo de Servicio es de S/ " + edtcostoServicio.getText().toString();
-                JSONObject notification = new JSONObject();
-                JSONObject notifcationBody = new JSONObject();
-                try {
-                    notifcationBody.put("title", NOTIFICATION_TITLE);
-                    notifcationBody.put("message", NOTIFICATION_MESSAGE);
-                    notification.put("to", TOPIC);
-                    notification.put("data", notifcationBody);
-                } catch (JSONException e) {
-                    Log.e(TAG, "onCreate: " + e.getMessage());
-                }*/
-                //sendNotification(notification);
-
-                //reference.push().setValue(saceptada);
-            //}
-        //});
+        Infouser();
     }
 
     @OnClick(R.id.btnaceptar)
     public void onViewClicked() {
-        Toast.makeText(UnirseRuta.this, "test", Toast.LENGTH_LONG).show();
-        cliente3 = "Nancy";
-        /*if(!cliente.isEmpty()){
-            cliente2 = "Vladimir Poma Laura";
-            eSolicitudAceptada saceptada = new eSolicitudAceptada(cliente, cliente2, cliente3, cliente4, conductor, latitud, longitud, Double.valueOf(edtcostoServicio.toString()), estado);
+        AlmacenarenArray();
+        Infouser();
+        Toast.makeText(UnirseRuta.this, "Se ha unido a la ruta", Toast.LENGTH_LONG).show();
+        if(cliente2.isEmpty()){
+            cliente2 = nombre;
+            eSolicitudAceptada saceptada = new eSolicitudAceptada(id, cliente, cliente2, "", "", conductor, latitud, longitud, Double.valueOf(edtcostoServicio.toString()), estado);
             eSolicitudAceptada soupdate = getSolicitud(saceptada.getId());
             if (soupdate != null) {
                 reference.child(soupdate.getId()).setValue(saceptada);
-            } else {
-                reference.push().setValue(saceptada);
             }
-        }else if (!cliente2.isEmpty()){
-            cliente3 = "Vladimir Poma Laura";
-            eSolicitudAceptada saceptada = new eSolicitudAceptada(cliente, cliente2, cliente3, cliente4, conductor, latitud, longitud, Double.valueOf(edtcostoServicio.toString()), estado);
+        }
+
+        else if (cliente3.isEmpty() && !cliente2.isEmpty() && !cliente.isEmpty()){
+            cliente3 = nombre;
+            eSolicitudAceptada saceptada = new eSolicitudAceptada(id, cliente, cliente2, cliente3, "", conductor, latitud, longitud, Double.valueOf(edtcostoServicio.toString()), estado);
             eSolicitudAceptada soupdate = getSolicitud(saceptada.getId());
             if (soupdate != null) {
                 reference.child(soupdate.getId()).setValue(saceptada);
-            } else {
-                reference.push().setValue(saceptada);
             }
-        }else if(!cliente3.isEmpty()){
-            cliente4 = "Vladimir Poma Laura";
-            eSolicitudAceptada saceptada = new eSolicitudAceptada(cliente, cliente2, cliente3, cliente4, conductor, latitud, longitud, Double.valueOf(edtcostoServicio.toString()), estado);
+        }
+
+        else if(cliente4.isEmpty() && !cliente2.isEmpty() && !cliente3.isEmpty() && !cliente.isEmpty()){
+            cliente4 = nombre;
+            eSolicitudAceptada saceptada = new eSolicitudAceptada(id, cliente, cliente2, cliente3, cliente4, conductor, latitud, longitud, Double.valueOf(edtcostoServicio.toString()), estado);
             eSolicitudAceptada soupdate = getSolicitud(saceptada.getId());
             if (soupdate != null) {
                 reference.child(soupdate.getId()).setValue(saceptada);
-            } else {
-                reference.push().setValue(saceptada);
             }
-        }*/
-        eSolicitudAceptada saceptada = new eSolicitudAceptada(id, cliente, cliente2, cliente3, "",  conductor, latitud, longitud, Double.valueOf(edtcostoServicio.toString()), estado);
+        }
+        /*eSolicitudAceptada saceptada = new eSolicitudAceptada(id, cliente, cliente2, cliente3, "",  conductor, latitud, longitud, Double.valueOf(edtcostoServicio.toString()), estado);
         eSolicitudAceptada soupdate = getSolicitud(saceptada.getId());
         if (soupdate != null) {
             reference.child(soupdate.getId()).setValue(saceptada);
         } else {
             reference.push().setValue(saceptada);
-        }
+        }*/
     }
 
 
@@ -206,6 +186,26 @@ public class UnirseRuta extends AppCompatActivity implements OnMapReadyCallback,
         });
     }
 
+    private void Infouser(){
+        fdb=FirebaseDatabase.getInstance().getReference();
+        mAuth= FirebaseAuth.getInstance();
+        String id=mAuth.getCurrentUser().getUid();
+        fdb.child("USUARIOS").child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    nombre = dataSnapshot.child("usuario").getValue().toString();
+                    String correo=dataSnapshot.child("correo").getValue().toString();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mapa = googleMap;
@@ -229,32 +229,4 @@ public class UnirseRuta extends AppCompatActivity implements OnMapReadyCallback,
     public void onMapClick(LatLng latLng) {
 
     }
-
-    /*private void sendNotification(JSONObject notification) {
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(FCM_API, notification,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        Log.i(TAG, "onResponse: " + response.toString());
-
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(UnirseRuta.this, "Request error", Toast.LENGTH_LONG).show();
-                        Log.i(TAG, "onErrorResponse: Didn't work");
-                    }
-                }) {
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("Authorization", serverKey);
-                params.put("Content-Type", contentType);
-                return params;
-            }
-        };
-        MySingleton.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectRequest);
-    }*/
 }
