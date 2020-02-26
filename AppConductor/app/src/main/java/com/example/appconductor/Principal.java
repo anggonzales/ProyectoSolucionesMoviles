@@ -78,11 +78,15 @@ public class Principal extends AppCompatActivity implements NavigationView.OnNav
                 break;
             case R.id.activity_solicitudes:
                 startActivity(new Intent(this, Solicitud_2.class));
-                finish();
+
                 break;
             case R.id.activity_enmarcha:
                 startActivity(new Intent(this, DetalleSolicitud.class));
-                finish();
+
+                break;
+            case R.id.activity_info:
+                startActivity(new Intent(this, ConductorPerfil.class));
+
                 break;
             default:
                 break;

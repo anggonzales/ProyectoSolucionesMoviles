@@ -37,7 +37,8 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
-        <activity android:name="com.example.appconductor.Principal" />
+        <activity android:name="com.example.appconductor.ConductorPerfil" />
+        <activity android:name="com.example.appconductor.Solicitudes.Solicitud_2" />
         <activity android:name="com.example.appconductor.RutasUsuarios" />
 
         <meta-data
@@ -53,7 +54,7 @@
         <activity android:name="com.example.appconductor.EnMarcha" /> <!-- <activity android:name=".MainActivity" /> -->
         <activity android:name="com.example.appconductor.SignUp" />
         <activity android:name="com.example.appconductor.BottomNav" />
-        <activity android:name="com.example.appconductor.Solicitudes.Solicitud_2" />
+        <activity android:name="com.example.appconductor.Principal" />
         <activity android:name="com.example.appconductor.Login" />
         <activity android:name="com.example.appconductor.MainActivity" >
             <intent-filter>

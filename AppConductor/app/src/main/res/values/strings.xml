@@ -8,4 +8,9 @@
     </string-array>
     <string name="drawer_open">abierto</string>
     <string name="drawer_close">cerrando</string>
+
+    <string name="texto_cambiar_contrasena">Cambia tu contraseña</string>
+    <string name="etiqueta_contrasena">Contraseña</string>
+    <string name="etiqueta_info_usuario">Información del usuario</string>
+    <string name="item_inicio">Inicio</string>
 </resources>

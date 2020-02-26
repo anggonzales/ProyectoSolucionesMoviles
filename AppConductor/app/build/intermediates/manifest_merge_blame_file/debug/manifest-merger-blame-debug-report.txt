@@ -6,27 +6,27 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
+8-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
+9-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:5:5-67
-11-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:5:22-64
+11-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:6:5-79
-12-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:6:22-76
+12-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:6:5-79
+12-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:6:22-76
 13
 14    <uses-feature android:name="android.hardware.location.gps" />
-14-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:8:5-66
-14-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:8:19-63
+14-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:8:5-66
+14-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:8:19-63
 15
 16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-16-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:10:5-81
-16-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:10:22-78
+16-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:10:5-81
+16-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:10:22-78
 17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-17-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:11:5-77
-17-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:11:22-74
+17-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:11:5-77
+17-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:11:22-74
 18
 19    <!-- Include required permissions for Google Maps API to run. -->
 20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -48,236 +48,239 @@
 27-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:26:22-79
 28
 29    <application
-29-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:13:5-52:19
+29-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:13:5-53:19
 30        android:allowBackup="true"
-30-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:14:9-35
+30-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:14:9-35
 31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 31-->[androidx.core:core:1.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e91594602c73eba9f0c6fb1745d43dba\core-1.1.0\AndroidManifest.xml:24:18-86
 32        android:debuggable="true"
 33        android:icon="@mipmap/ic_logo"
-33-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:15:9-39
+33-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:15:9-39
 34        android:label="@string/app_name"
-34-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:16:9-41
+34-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:16:9-41
 35        android:roundIcon="@mipmap/ic_launcher_round"
-35-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:17:9-54
+35-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:17:9-54
 36        android:supportsRtl="true"
-36-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:18:9-35
+36-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:18:9-35
 37        android:testOnly="true"
 38        android:theme="@style/AppTheme"
-38-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:19:9-40
+38-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:19:9-40
 39        android:usesCleartextTraffic="true" >
-39-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:20:9-44
-40        <activity android:name="com.example.appconductor.Principal" />
-40-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:21:9-56
-40-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:21:19-44
-41        <activity android:name="com.example.appconductor.RutasUsuarios" />
-41-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:22:9-51
-41-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:22:19-48
-42
-43        <meta-data
-43-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:24:9-26:71
-44            android:name="com.google.android.geo.API_KEY"
-44-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:25:13-58
-45            android:value="AIzaSyApOTFfvxhFlfpbFDQDQfZxm2sN_SxG2sc" />
-45-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:26:13-68
-46
-47        <uses-library
-47-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:28:9-30:40
-48            android:name="org.apache.http.legacy"
-48-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:29:13-50
-49            android:required="false" />
-49-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:30:13-37
-50
-51        <activity android:name="com.example.appconductor.Solicitudes.SolicitudMapa" />
-51-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:32:9-63
-51-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:32:19-60
-52        <activity android:name="com.example.appconductor.Solicitudes.DetalleSolicitud" />
-52-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:33:9-66
-52-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:33:19-63
-53        <activity android:name="com.example.appconductor.EnMarcha" /> <!-- <activity android:name=".MainActivity" /> -->
-53-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:34:9-46
-53-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:34:19-43
-54        <activity android:name="com.example.appconductor.SignUp" />
-54-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:35:9-44
-54-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:35:19-41
-55        <activity android:name="com.example.appconductor.BottomNav" />
-55-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:36:9-47
-55-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:36:19-44
-56        <activity android:name="com.example.appconductor.Solicitudes.Solicitud_2" />
-56-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:37:9-61
-56-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:37:19-58
-57        <activity android:name="com.example.appconductor.Login" />
-57-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:38:9-43
-57-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:38:19-40
-58        <activity android:name="com.example.appconductor.MainActivity" >
-58-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:39:9-45:20
-58-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:39:19-47
-59            <intent-filter>
-59-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:40:13-44:29
-60                <action android:name="android.intent.action.MAIN" />
-60-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:41:17-69
-60-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:41:25-66
-61
-62                <category android:name="android.intent.category.LAUNCHER" />
-62-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:43:17-77
-62-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:43:27-74
-63            </intent-filter>
-64        </activity>
-65
-66        <service android:name="com.example.appconductor.Solicitudes.ServicioAceptacion" >
-66-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:47:9-51:19
-66-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:47:18-64
-67            <intent-filter>
-67-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:48:13-50:29
-68                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-68-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:49:17-78
-68-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:49:25-75
-69            </intent-filter>
-70        </service>
-71        <!--
-72             FirebaseMessagingService performs security checks at runtime,
-73             but set to not exported to explicitly avoid allowing another app to call it.
-74        -->
-75        <service
-75-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:28:9-34:19
-76            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-76-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:29:13-82
-77            android:exported="false" >
-77-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:30:13-37
-78            <intent-filter android:priority="-500" >
-78-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:48:13-50:29
-79                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-79-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:49:17-78
-79-->D:\VII ciclo\Moviles\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:49:25-75
-80            </intent-filter>
-81        </service>
-82        <service
-82-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:35:9-41:19
-83            android:name="com.google.firebase.components.ComponentDiscoveryService"
-83-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:36:13-84
-84            android:directBootAware="true"
-84-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
-85            android:exported="false" >
-85-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:37:13-37
-86            <meta-data
-86-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:38:13-40:85
-87                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-87-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:39:17-119
-88                android:value="com.google.firebase.components.ComponentRegistrar" />
-88-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:40:17-82
-89            <meta-data
-89-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:36:13-38:85
-90                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-90-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:37:17-109
-91                android:value="com.google.firebase.components.ComponentRegistrar" />
-91-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:38:17-82
-92            <meta-data
-92-->[com.google.firebase:firebase-database:19.2.1] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\3bb9fab9565f3c13da1b0de3227d5105\firebase-database-19.2.1\AndroidManifest.xml:32:13-34:85
-93                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-93-->[com.google.firebase:firebase-database:19.2.1] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\3bb9fab9565f3c13da1b0de3227d5105\firebase-database-19.2.1\AndroidManifest.xml:33:17-109
-94                android:value="com.google.firebase.components.ComponentRegistrar" />
-94-->[com.google.firebase:firebase-database:19.2.1] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\3bb9fab9565f3c13da1b0de3227d5105\firebase-database-19.2.1\AndroidManifest.xml:34:17-82
-95            <meta-data
-95-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\43fa407be020506bcbbacb83e7cde00d\firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
-96                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-96-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\43fa407be020506bcbbacb83e7cde00d\firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
-97                android:value="com.google.firebase.components.ComponentRegistrar" />
-97-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\43fa407be020506bcbbacb83e7cde00d\firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
-98            <meta-data
-98-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:32:13-34:85
-99                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-99-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:33:17-96
-100                android:value="com.google.firebase.components.ComponentRegistrar" />
-100-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:34:17-82
-101        </service>
-102
-103        <activity
-103-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:24:9-31:50
-104            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-104-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:25:13-85
-105            android:excludeFromRecents="true"
-105-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:26:13-46
-106            android:exported="true"
-106-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:27:13-36
-107            android:launchMode="singleTask"
-107-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:28:13-44
-108            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-108-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:29:13-102
-109            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-109-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:30:13-72
-110
-111        <receiver
-111-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:37:9-44:20
-112            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-112-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:38:13-78
-113            android:exported="true"
-113-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:39:13-36
-114            android:permission="com.google.android.c2dm.permission.SEND" >
-114-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:40:13-73
-115            <intent-filter>
-115-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:41:13-43:29
-116                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-116-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:42:17-81
-116-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:42:25-78
-117            </intent-filter>
-118        </receiver>
-119
-120        <provider
-120-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
-121            android:name="com.google.firebase.provider.FirebaseInitProvider"
-121-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
-122            android:authorities="com.example.appconductor.firebaseinitprovider"
-122-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
-123            android:exported="false"
-123-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
-124            android:initOrder="100" />
-124-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
-125
-126        <activity
-126-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\a7dfbb78c47d6fb61939251aeae30df0\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-127            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-127-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\a7dfbb78c47d6fb61939251aeae30df0\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-128            android:exported="false"
-128-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\a7dfbb78c47d6fb61939251aeae30df0\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-129            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-129-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\a7dfbb78c47d6fb61939251aeae30df0\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-130
-131        <meta-data
-131-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1b205d7dc27eaa4bcaf3f3dfbc68e639\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-132            android:name="com.google.android.gms.version"
-132-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1b205d7dc27eaa4bcaf3f3dfbc68e639\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-133            android:value="@integer/google_play_services_version" />
-133-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1b205d7dc27eaa4bcaf3f3dfbc68e639\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-134
-135        <service
-135-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
-136            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-136-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
-137            android:exported="false" >
-137-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
-138            <meta-data
-138-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
-139                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-139-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
-140                android:value="cct" />
-140-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
-141        </service>
-142        <service
-142-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
-143            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-143-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
-144            android:exported="false"
-144-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
-145            android:permission="android.permission.BIND_JOB_SERVICE" >
-145-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
-146        </service>
-147
-148        <receiver
-148-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
-149            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-149-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
-150            android:exported="false" />
-150-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
-151    </application>
-152
-153</manifest>
+39-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:20:9-44
+40        <activity android:name="com.example.appconductor.ConductorPerfil" />
+40-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:21:9-62
+40-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:21:19-50
+41        <activity android:name="com.example.appconductor.Solicitudes.Solicitud_2" />
+41-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:22:9-61
+41-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:22:19-58
+42        <activity android:name="com.example.appconductor.RutasUsuarios" />
+42-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:23:9-51
+42-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:23:19-48
+43
+44        <meta-data
+44-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:25:9-27:71
+45            android:name="com.google.android.geo.API_KEY"
+45-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:26:13-58
+46            android:value="AIzaSyApOTFfvxhFlfpbFDQDQfZxm2sN_SxG2sc" />
+46-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:27:13-68
+47
+48        <uses-library
+48-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:29:9-31:40
+49            android:name="org.apache.http.legacy"
+49-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:30:13-50
+50            android:required="false" />
+50-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:31:13-37
+51
+52        <activity android:name="com.example.appconductor.Solicitudes.SolicitudMapa" />
+52-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:33:9-63
+52-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:33:19-60
+53        <activity android:name="com.example.appconductor.Solicitudes.DetalleSolicitud" />
+53-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:34:9-66
+53-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:34:19-63
+54        <activity android:name="com.example.appconductor.EnMarcha" /> <!-- <activity android:name=".MainActivity" /> -->
+54-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:35:9-46
+54-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:35:19-43
+55        <activity android:name="com.example.appconductor.SignUp" />
+55-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:36:9-44
+55-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:36:19-41
+56        <activity android:name="com.example.appconductor.BottomNav" />
+56-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:37:9-47
+56-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:37:19-44
+57        <activity android:name="com.example.appconductor.Principal" />
+57-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:38:9-47
+57-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:38:19-44
+58        <activity android:name="com.example.appconductor.Login" />
+58-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:39:9-43
+58-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:39:19-40
+59        <activity android:name="com.example.appconductor.MainActivity" >
+59-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:40:9-46:20
+59-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:40:19-47
+60            <intent-filter>
+60-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:41:13-45:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:42:17-69
+61-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:42:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:44:17-77
+63-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:44:27-74
+64            </intent-filter>
+65        </activity>
+66
+67        <service android:name="com.example.appconductor.Solicitudes.ServicioAceptacion" >
+67-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:48:9-52:19
+67-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:48:18-64
+68            <intent-filter>
+68-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:49:13-51:29
+69                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+69-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:50:17-78
+69-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:50:25-75
+70            </intent-filter>
+71        </service>
+72        <!--
+73             FirebaseMessagingService performs security checks at runtime,
+74             but set to not exported to explicitly avoid allowing another app to call it.
+75        -->
+76        <service
+76-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:28:9-34:19
+77            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+77-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:29:13-82
+78            android:exported="false" >
+78-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:30:13-37
+79            <intent-filter android:priority="-500" >
+79-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:49:13-51:29
+80                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+80-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:50:17-78
+80-->D:\VII ciclo\Moviles\modificadocolectivo\ProyectoSolucionesMoviles\AppConductor\app\src\main\AndroidManifest.xml:50:25-75
+81            </intent-filter>
+82        </service>
+83        <service
+83-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:35:9-41:19
+84            android:name="com.google.firebase.components.ComponentDiscoveryService"
+84-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:36:13-84
+85            android:directBootAware="true"
+85-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+86            android:exported="false" >
+86-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:37:13-37
+87            <meta-data
+87-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:38:13-40:85
+88                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+88-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:39:17-119
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-messaging:20.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\ad6c2166c025cf1a944d79cce0b24c48\jetified-firebase-messaging-20.1.0\AndroidManifest.xml:40:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:36:13-38:85
+91                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+91-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:37:17-109
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:38:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-database:19.2.1] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\3bb9fab9565f3c13da1b0de3227d5105\firebase-database-19.2.1\AndroidManifest.xml:32:13-34:85
+94                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+94-->[com.google.firebase:firebase-database:19.2.1] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\3bb9fab9565f3c13da1b0de3227d5105\firebase-database-19.2.1\AndroidManifest.xml:33:17-109
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-database:19.2.1] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\3bb9fab9565f3c13da1b0de3227d5105\firebase-database-19.2.1\AndroidManifest.xml:34:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\43fa407be020506bcbbacb83e7cde00d\firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+97                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+97-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\43fa407be020506bcbbacb83e7cde00d\firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\43fa407be020506bcbbacb83e7cde00d\firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+99            <meta-data
+99-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:32:13-34:85
+100                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+100-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:33:17-96
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:34:17-82
+102        </service>
+103
+104        <activity
+104-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:24:9-31:50
+105            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+105-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:25:13-85
+106            android:excludeFromRecents="true"
+106-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:26:13-46
+107            android:exported="true"
+107-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:27:13-36
+108            android:launchMode="singleTask"
+108-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:28:13-44
+109            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+109-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:29:13-102
+110            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+110-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\519bb249cc80507951a4e4dc8a3057bc\firebase-auth-19.2.0\AndroidManifest.xml:30:13-72
+111
+112        <receiver
+112-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:37:9-44:20
+113            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+113-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:38:13-78
+114            android:exported="true"
+114-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:39:13-36
+115            android:permission="com.google.android.c2dm.permission.SEND" >
+115-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:40:13-73
+116            <intent-filter>
+116-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:41:13-43:29
+117                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+117-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:42:17-81
+117-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\f41c156e0ed91e1f3824f8f6e622f777\firebase-iid-20.0.2\AndroidManifest.xml:42:25-78
+118            </intent-filter>
+119        </receiver>
+120
+121        <provider
+121-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+122            android:name="com.google.firebase.provider.FirebaseInitProvider"
+122-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+123            android:authorities="com.example.appconductor.firebaseinitprovider"
+123-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+124            android:exported="false"
+124-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+125            android:initOrder="100" />
+125-->[com.google.firebase:firebase-common:19.3.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\e053af35cf1c91ca09ab05cf04a0746c\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+126
+127        <activity
+127-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\a7dfbb78c47d6fb61939251aeae30df0\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+128            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+128-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\a7dfbb78c47d6fb61939251aeae30df0\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+129            android:exported="false"
+129-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\a7dfbb78c47d6fb61939251aeae30df0\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+130            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+130-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\a7dfbb78c47d6fb61939251aeae30df0\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+131
+132        <meta-data
+132-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1b205d7dc27eaa4bcaf3f3dfbc68e639\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+133            android:name="com.google.android.gms.version"
+133-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1b205d7dc27eaa4bcaf3f3dfbc68e639\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+134            android:value="@integer/google_play_services_version" />
+134-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1b205d7dc27eaa4bcaf3f3dfbc68e639\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+135
+136        <service
+136-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
+137            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+137-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
+138            android:exported="false" >
+138-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
+139            <meta-data
+139-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
+140                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+140-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
+141                android:value="cct" />
+141-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\66258460de5c0133a5aa64fac5c560a9\transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
+142        </service>
+143        <service
+143-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
+144            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+144-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
+145            android:exported="false"
+145-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
+146            android:permission="android.permission.BIND_JOB_SERVICE" >
+146-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
+147        </service>
+148
+149        <receiver
+149-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
+150            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+150-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
+151            android:exported="false" />
+151-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\akari\.gradle\caches\transforms-2\files-2.1\1558dbb832ddcc6425f4ba527abb480f\transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
+152    </application>
+153
+154</manifest>

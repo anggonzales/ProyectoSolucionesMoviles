@@ -35,9 +35,9 @@
         <activity android:name=".EnMarcha" /> <!-- <activity android:name=".MainActivity" /> -->
         <activity android:name=".SignUp" />
         <activity android:name=".BottomNav" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Principal" />
         <activity android:name=".Login" />
-        <activity android:name=".Principal">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

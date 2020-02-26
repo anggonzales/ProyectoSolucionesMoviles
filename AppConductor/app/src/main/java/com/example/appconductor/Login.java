@@ -62,9 +62,12 @@ public class Login extends AppCompatActivity {
         iniciar_sesion.setOnClickListener(new View.OnClickListener() {
 
 
+
             @Override
             public void onClick(View view) {
                 progresbar.setVisibility(View.VISIBLE);
+                iniciar_sesion.setVisibility(View.GONE);
+
                 email = correo.getText().toString();
                 clave = contraseña.getText().toString();
 
@@ -79,6 +82,7 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(Login.this, "Debe completar los campos", Toast.LENGTH_SHORT).show();
                 }
                 progresbar.setVisibility(View.GONE);
+                iniciar_sesion.setVisibility(View.VISIBLE);
                 //startActivity(new Intent(Login.this, Solicitud.class));
                 //Aquí codigo
             }

@@ -107,23 +107,15 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="40dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ProgressBar
-                android:id="@+id/progresslogin"
-                android:layout_width="80dp"
-                android:layout_height="69dp"
-                android:visibility="gone" />
-
-
-        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progresslogin"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
     </LinearLayout>
 
